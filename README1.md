@@ -5,7 +5,7 @@
 ![push](https://img.shields.io/npm/v/push)
 
 Description: 
-This project is to demonstrate knowleged and understanding of utilizing node and the terminal to generate a README file. 
+This project is to demonstrate knowlege and understanding of utilizing node and the terminal to generate a README file. 
 
 Table of Contents:
   Installation
