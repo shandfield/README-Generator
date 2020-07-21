@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
 var fs= require("fs");
+var path= require ("path");
 
 
 function promptUser(){
@@ -41,21 +42,45 @@ function promptUser(){
         },
     ]);
 };
-function generatereadMe(answers){
-    return
 
+    //thoughts behind this: was to take the answers given by the user, and generate the Read Me file from that.. not sure this is correct
+function generatereadMe(answers){
+    
+    return `#${answers.name}
+#${answers.title}
+
+#${answers.description}
+
+#${answers.install}
+
+#${answers.usage}
+
+#${answers.contribution}
+
+#${answers.test}
+
+
+    `
+   
 }
 
-//*pick up from here after a break 
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName),data)//writting to my file and first connecting with my file directory adn then connecting to the fileName with the data
+}//current working directory .cwd()
+
+
+
+//this is based from the promptUser function above where it takes the answers and puts them in my new object, readMe which is based on the generatereadMe function (that is not done yet) and use the answers to generate 
 promptUser()
   .then(function(answers) {
     const readMe = generatereadMe(answers);
+    //used this from a different example in class, not correct though like the writeFileAsync and I want it to go tot he log.txt file I think that has the value of a readMe.... 
+    writeToFile("README.md",readMe);
 
-    return writeFileAsync("index.html", html);
-  })
+    })//this is for when it is done correctly it tells the user 
   .then(function() {
-    console.log("Successfully wrote to index.html");
-  })
+    console.log("Successfully wrote to README.md");
+  })//if there is an error then it will tell the user 
   .catch(function(err) {
     console.log(err);
   });
