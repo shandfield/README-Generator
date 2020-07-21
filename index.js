@@ -32,7 +32,7 @@ function promptUser(){
         },
         {//Contribution guidelines 
             type: "input",
-            message: "Please give details regarding contribution guidelines:",
+            message: "Please give details regarding any additional contribution guidelines:",
             name: "contribution" 
         },
         {//Test Instructions
@@ -40,29 +40,40 @@ function promptUser(){
             message: "Please give details regarding test instructions:",
             name: "test" 
         },
+
     ]);
 };
 
     //thoughts behind this: was to take the answers given by the user, and generate the Read Me file from that.. not sure this is correct
 function generatereadMe(answers){
     
-    return `#${answers.name}
-#${answers.title}
+    return `
+${answers.title}
 
-#${answers.description}
+${answers.description}
+
+Table of Contents:
+Installation
+Usage
+Credits
+License
 
 #${answers.install}
 
-#${answers.usage}
+License:
+/github/license/:user/:repo
 
-#${answers.contribution}
+#${answers.contribution} 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 #${answers.test}
 
+${answers.usage}
 
-    `
-   
-}
+Questions:
+If you have any questions please reach out to me via my GitHub, https://github.com/shandfield.
+   `
+};
 
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName),data)//writting to my file and first connecting with my file directory adn then connecting to the fileName with the data
@@ -84,3 +95,4 @@ promptUser()
   .catch(function(err) {
     console.log(err);
   });
+  
