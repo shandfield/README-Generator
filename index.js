@@ -50,6 +50,7 @@ function generatereadMe(answers){
     return `
 ${answers.title}
 
+Description:
 ${answers.description}
 
 Table of Contents:
@@ -58,17 +59,25 @@ Usage
 Credits
 License
 
-#${answers.install}
+${answers.install}
+Install:
+/npm/l/:fs
+/npm/l/:inquirer
+/npm/l/:path
 
 License:
 /github/license/:user/:repo
 
-#${answers.contribution} 
+Contrubition:
+${answers.contribution} 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
-#${answers.test}
+Test:
+${answers.test}
 
+Usage:
 ${answers.usage}
+
 
 Questions:
 If you have any questions please reach out to me via my GitHub, https://github.com/shandfield.
