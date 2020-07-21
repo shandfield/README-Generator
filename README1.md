@@ -8,8 +8,7 @@ License
 
 Install:
 /npm/l/:fs
-/npm/l/:inquirer
-/npm/l/:path
+
 
 License:
 /github/license/:user/:repo
