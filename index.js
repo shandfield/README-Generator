@@ -61,7 +61,7 @@ ${answers.description}
 Table of Contents:
     Installation
     Usage
-    Credits
+    Contribution
     License
 
 
@@ -77,7 +77,7 @@ License:
 /github/license/:user/:repo
 
 
-Contributing:
+Contribution:
 ${answers.contribution} 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
