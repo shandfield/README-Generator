@@ -61,9 +61,9 @@ License
 
 ${answers.install}
 Install:
-/npm/l/:fs
-/npm/l/:inquirer
-/npm/l/:path
+https://img.shields.io/npm/v/fs
+https://img.shields.io/npm/v/inquirer
+https://img.shields.io/npm/v/push
 
 License:
 /github/license/:user/:repo
